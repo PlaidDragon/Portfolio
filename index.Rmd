@@ -2,6 +2,8 @@
 title: "Fake or Real News? An NLP Model"
 author: "Kristana Reed"
 date: "`r Sys.Date()`"
+email_address: plaiddragon@rocketmail.com
+github_repo: https://github.com/PlaidDragon/Portfolio
 output:
   html_document:
     toc: true
