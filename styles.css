@@ -1,0 +1,88 @@
+/* Portfolio cards */
+.project-card {
+  margin-bottom: 30px;
+}
+
+.card {
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform .2s;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+/* Filter buttons */
+.filter-buttons {
+  margin-bottom: 20px;
+}
+
+/* Override primary button color */
+.btn-primary {
+  background-color: #81C786 !important; 
+  border-color: #81C786 !important;
+  color: #fff !important;
+}
+
+/* Override outline style */
+.btn-outline-primary {
+  color: #81C786;
+  border-color: #90BED1;
+}
+.btn-outline-primary:hover {
+  background-color: #81C786;
+  color: #fff;
+}
+
+/* Sticky Nav */
+.sticky-button {
+  position: fixed;   /* Fix it relative to the viewport */
+  bottom: 20px;      /* 20px from the bottom */
+  right: 20px;       /* 20px from the right */
+  z-index: 1000;     /* Make sure it’s on top */
+  background-color: #81C786;
+  border-color: #90BED1;
+  color: #fff
+}
+.sticky-button:hover {
+  background-color: #fff;
+  color: #81C786;
+}
+
+
+/* Hide/show via filtering */
+.project-card { display: none; }
+.project-card.show { display: block; }
+
+/* Banner section */
+.banner {
+  background: linear-gradient(120deg, #81C786, #90BED1); /* green → blue */
+  color: white;
+  padding: 0px 0px;
+  text-align: left;
+  margin-bottom: 40px;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.banner-title {
+  font-size: 4.8rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.banner-subtitle {
+  font-size: 2.3rem;
+  font-weight: 300;
+  opacity: 0.95;
+}
+
+.banner-link {
+  color: #1A4C61; 
+  font-size: 15px; 
+  text-decoration: underline;
+}
+
+
+
