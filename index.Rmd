@@ -36,6 +36,16 @@ output:
 <!-- </div> -->
 
 <div class="row portfolio">
+ <div class="col-md-4 project-card analysis">
+      <div class="card">
+         <img src="images/solar_power.png" class="card-img-top"> 
+         <div class="card-body">
+            <h5 class="card-title">Solar Power Plant Monitoring</h5>
+            <p class="card-text">Evaluate performance of solar pannel power generation to identify maitainance needs and potential issues</p>
+            <a href="SolarPowerAnalysis.html" class="btn btn-sm btn-primary">View Project</a> 
+         </div>
+      </div>
+   </div>
    <div class="col-md-4 project-card analysis">
       <div class="card">
          <img src="images/homeless_shelter.png" class="card-img-top"> 
