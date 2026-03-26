@@ -2,6 +2,11 @@ h1.title {
   display: none;
 }
 
+/* Page background + base font */
+body {
+  background-color: #f5f7f5;
+  font-size: 17px;
+}
 
 /* Portfolio cards */
 .project-card {
@@ -10,51 +15,159 @@ h1.title {
 
 .card {
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: transform .2s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform .2s ease, box-shadow .2s ease;
+  border: none;
+  overflow: hidden;
 }
 
 .card:hover {
-  transform: scale(1.03);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.14);
+}
+
+.card-img-top {
+  height: 320px;
+  object-fit: cover;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  padding: 18px;
+}
+
+.card-title {
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.card-text {
+  font-size: 1.1rem;
+  color: #555;
+  flex-grow: 1;
+  margin-bottom: 14px;
+}
+
+/* Category badge */
+.card-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  width: fit-content;
+}
+
+.badge-analysis {
+  background-color: #dbeafe;
+  color: #1d4ed8;
+}
+
+.badge-ml {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+
+/* Result callout */
+.result-callout {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1d4ed8;
+  background-color: #eff6ff;
+  border-left: 3px solid #3b82f6;
+  padding: 7px 12px;
+  border-radius: 0 6px 6px 0;
+  margin-bottom: 12px;
+}
+
+/* Card tech tags */
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.card-tag {
+  display: inline-block;
+  font-size: 0.88rem;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 20px;
+  background-color: #f1f5f9;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+}
+
+/* Card action buttons */
+.card-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
 /* Filter buttons */
 .filter-buttons {
-  margin-bottom: 20px;
+  margin-bottom: 28px;
+  margin-top: 4px;
+}
+
+.filter-buttons .btn {
+  border-radius: 20px !important;
+  padding: 9px 26px;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-right: 6px;
 }
 
 /* Override primary button color */
 .btn-primary {
-  background-color: #81C786 !important; 
-  border-color: #81C786 !important;
+  background-color: #3a9e6f !important;
+  border-color: #3a9e6f !important;
   color: #fff !important;
+}
+
+.btn-primary:hover {
+  background-color: #2d7d57 !important;
+  border-color: #2d7d57 !important;
 }
 
 /* Override outline style */
 .btn-outline-primary {
-  color: #81C786;
-  border-color: #90BED1;
+  color: #3a9e6f;
+  border-color: #3a9e6f;
+  background-color: transparent;
 }
+
 .btn-outline-primary:hover {
-  background-color: #81C786;
+  background-color: #3a9e6f;
+  border-color: #3a9e6f;
   color: #fff;
 }
 
 /* Sticky Nav */
 .sticky-button {
-  position: fixed;   /* Fix it relative to the viewport */
-  bottom: 20px;      /* 20px from the bottom */
-  right: 20px;       /* 20px from the right */
-  z-index: 1000;     /* Make sure it’s on top */
-  background-color: #81C786;
-  border-color: #90BED1;
-  color: #fff
-}
-.sticky-button:hover {
-  background-color: #fff;
-  color: #81C786;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: #3a9e6f;
+  border-color: #3a9e6f;
+  color: #fff;
+  border-radius: 20px;
+  padding: 8px 20px;
 }
 
+.sticky-button:hover {
+  background-color: #fff;
+  color: #3a9e6f;
+  border-color: #3a9e6f;
+}
 
 /* Hide/show via filtering */
 .project-card { display: none; }
@@ -62,32 +175,141 @@ h1.title {
 
 /* Banner section */
 .banner {
-  background: linear-gradient(120deg, #81C786, #90BED1); /* green → blue */
+  background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 40%, #52b788 100%);
   color: white;
-  padding: 0px 0px;
+  padding: 70px 0 60px;
   text-align: left;
   margin-bottom: 40px;
-  border-radius: 0 0 20px 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  border-radius: 0 0 24px 24px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
 }
 
 .banner-title {
-  font-size: 4.8rem;
+  font-size: 4.4rem;
   font-weight: 700;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
 }
 
 .banner-subtitle {
-  font-size: 2.3rem;
+  font-size: 1.2rem;
   font-weight: 300;
-  opacity: 0.95;
+  opacity: 0.88;
+  max-width: 560px;
+  margin-bottom: 28px;
+  line-height: 1.65;
+}
+
+.banner-links {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .banner-link {
-  color: #1A4C61; 
-  font-size: 15px; 
-  text-decoration: underline;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #fff !important;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none !important;
+  background-color: rgba(255,255,255,0.18);
+  border: 1px solid rgba(255,255,255,0.4);
+  padding: 7px 18px;
+  border-radius: 20px;
+  transition: background-color .2s;
 }
 
+.banner-link:hover {
+  background-color: rgba(255,255,255,0.32);
+  color: #fff !important;
+  text-decoration: none !important;
+}
 
+/* About section */
+.about-section {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px 32px;
+  margin-bottom: 36px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
 
+.about-section h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 10px;
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  color: #4a5568;
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* Skills strip */
+.skills-strip {
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-tag {
+  display: inline-block;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 5px 14px;
+  border-radius: 20px;
+  background-color: #f0fdf4;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+}
+
+/* Projects section heading */
+.section-heading {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+/* Portfolio intro line */
+.portfolio-intro {
+  font-size: 1rem;
+  color: #718096;
+  margin-bottom: 20px;
+}
+
+/* Footer */
+.portfolio-footer {
+  margin-top: 56px;
+  padding: 28px 0 20px;
+  border-top: 1px solid #e2e8f0;
+  text-align: center;
+  color: #718096;
+  font-size: 1rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: #3a9e6f;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}

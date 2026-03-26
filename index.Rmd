@@ -20,52 +20,58 @@ output:
   <div class="container">
     <h1 class="banner-title">Kristiana Reed's Portfolio</h1>
     <p class="banner-subtitle">
-      A Collection of Data Analysis, Data Visualization, and Machine Learning Projects.
+      A collection of Data Analysis, Data Visualization, and Machine Learning projects.
     </p>
-    <p> Contact me via my
-      <a href="https://www.linkedin.com/in/kristiana-reed" class="banner-link" target="_blank">LinkedIn Profile</a>
-    </p>
+    <div class="banner-links">
+      <a href="https://www.linkedin.com/in/kristiana-reed" class="banner-link" target="_blank">
+        &#128101; LinkedIn
+      </a>
+    </div>
   </div>
 </div>
 
+<p class="section-heading">Projects</p>
 
 <div class="btn-group filter-buttons">
-  <button class="btn btn-primary active" data-filter="all">Show all</button>
+  <button class="btn btn-primary active" data-filter="all">Show All</button>
   <button class="btn btn-outline-primary" data-filter="analysis">Data Analysis</button>
   <button class="btn btn-outline-primary" data-filter="machine_learning">Machine Learning</button>
 </div>
 
 <div class="row portfolio">
-   </div>
-    <div class="col-md-4 project-card machine_learning">
-      <div class="card">
-         <img src="images/bouncerate_ttfb.png" class="card-img-top"> 
-         <div class="card-body">
-            <h5 class="card-title">Bounce Rate and TTFB Correlation</h5>
-            <p class="card-text">Using a GAM answer the question: "If TTFB improves by x milliseconds, bounce rate will improve y%"</p>
-            <a href="BounceRateImactAnalysis.html" class="btn btn-sm btn-primary">View Project</a> 
-         </div>
+  <div class="col-md-4 project-card machine_learning">
+    <div class="card">
+      <img src="images/bouncerate_ttfb.png" class="card-img-top">
+      <div class="card-body">
+        <span class="card-badge badge-ml">Machine Learning</span>
+        <h5 class="card-title">Bounce Rate and TTFB Correlation</h5>
+        <p class="card-text">Using a GAM to answer: "If TTFB improves by x milliseconds, how much will bounce rate improve?"</p>
+        <a href="BounceRateImactAnalysis.html" class="btn btn-sm btn-primary">View Project</a>
       </div>
-   </div>
- <div class="col-md-4 project-card analysis">
-      <div class="card">
-         <img src="images/solar_power.png" class="card-img-top"> 
-         <div class="card-body">
-            <h5 class="card-title">Solar Power Plant Monitoring</h5>
-            <p class="card-text">Evaluate performance of solar pannel power generation to identify maitainance needs and potential issues</p>
-            <a href="SolarPowerAnalysis.html" class="btn btn-sm btn-primary">View Project</a> 
-         </div>
+    </div>
+  </div>
+  <div class="col-md-4 project-card analysis">
+    <div class="card">
+      <img src="images/solar_power.png" class="card-img-top">
+      <div class="card-body">
+        <span class="card-badge badge-analysis">Data Analysis</span>
+        <h5 class="card-title">Solar Power Plant Monitoring</h5>
+        <p class="card-text">Evaluate performance of solar panel power generation to identify maintenance needs and potential issues.</p>
+        <a href="SolarPowerAnalysis.html" class="btn btn-sm btn-primary">View Project</a>
       </div>
-   </div>
-   <div class="col-md-4 project-card analysis">
-      <div class="card">
-         <img src="images/homeless_shelter.png" class="card-img-top"> 
-         <div class="card-body">
-            <h5 class="card-title">Sheltering the Homeless</h5>
-            <p class="card-text">An analysis on which shelters are under the most occupancy stress</p>
-            <a href="HomelessShelterAnalysis.html" class="btn btn-sm btn-primary">View Project</a> 
-         </div>
+    </div>
+  </div>
+  <div class="col-md-4 project-card analysis">
+    <div class="card">
+      <img src="images/homeless_shelter.png" class="card-img-top">
+      <div class="card-body">
+        <span class="card-badge badge-analysis">Data Analysis</span>
+        <h5 class="card-title">Sheltering the Homeless</h5>
+        <p class="card-text">An analysis identifying which shelters are under the most occupancy stress.</p>
+        <a href="HomelessShelterAnalysis.html" class="btn btn-sm btn-primary">View Project</a>
       </div>
+    </div>
+  </div>
 </div>
 
 <script>
@@ -85,23 +91,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
   buttons.forEach(btn => {
     btn.addEventListener("click", () => {
-      // Reset all buttons to outline style
       buttons.forEach(b => {
         b.classList.remove("btn-primary");
         b.classList.add("btn-outline-primary");
       });
-
-      // Highlight the clicked button
       btn.classList.remove("btn-outline-primary");
       btn.classList.add("btn-primary");
-
-      // Filter projects
-      const filter = btn.getAttribute("data-filter");
-      filterProjects(filter);
+      filterProjects(btn.getAttribute("data-filter"));
     });
   });
 
-  // Show all by default
   filterProjects("all");
 });
 </script>
